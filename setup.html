@@ -115,19 +115,18 @@ heroku create
 <li><p>Perform setup</p></li>
 <li><p>Link Salesforce account</p></li>
 <li><p>Map desired field from Salesforce (Demo setup for any double field)</p></li>
-<li><p>Take note of the field name (ours lookes like loyalty_points__c) we will later add this to the Actionhero server</p></li>
-<li><p>Take note of teh Mapped Object Name (ours is Account) we will later add this to the Actionhero server</p></li>
-<li><p>Take note of teh DATABASE_URL (ours is salesforce) we will later add this to the Actionhero server</p></li>
+<li><p>Take note of the field name (ours looks like loyalty_points__c). We will later add this to the Actionhero server</p></li>
+<li><p>Take note of the Mapped Object Name (ours is Account). We will later add this to the Actionhero server</p></li>
+<li><p>Take note of the DATABASE_URL (ours is salesforce). We will later add this to the Actionhero server</p></li>
 </ul>
 <li><p>Obtain Postgres URL</p>
 <ul>
 <li><p>Navigate to your Heroku app dashboard</p></li>
 <li><p>Click on Postgres addon</p></li>
-<li><p>Under Connection Settings</p></li>
-<li><p>For the field URL click show</p></li>
-<li><p>Take not of the URL we will later add this to the Actionhero server</p></li>
+<li><p>Under Connection Settings, click "Show" in the URL field</p></li>
+<li><p>Take note of the URL. We will later add this to the Actionhero server</p></li>
 </ul>
-<li><p>Configure Action Hero server</p>
+<li><p>Configure Action Hero Server</p>
 <ul>
 <li><p>Within your git navigate to server/pg.js</p></li>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Replace conString with the Postgres URL
@@ -185,7 +184,7 @@ heroku create
 </ul>
 
 
-<li><p>Deploy to device 2 devices</p>
+<li><p>Deploy to Devices</p>
 <ul><li><p>Deploy to iOS Phone (Consumer)</p></li>
 <li><p>Deploy to Tablet (Kiosk)</p></li>
 </ul>
