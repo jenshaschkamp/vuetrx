@@ -91,6 +91,9 @@ heroku create
 <li><p>Install Heroku Connect   </p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:create herokuconnect
 </code></pre></div></li>
+<li><p>Install the Postgres plugin   </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:dev
+</code></pre></div></li>
 <li><p>Deploy to Heroku</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
 </code></pre></div></li>
@@ -99,28 +102,6 @@ heroku create
 </code></pre></div></li>
 </ol>
 
-<h2>Installing a Local Version</h2>
-
-<p>You can also install Vuetrx on your local machine:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/ClearbridgeMobile/vuetrx
-</code></pre></div></li>
-<li><p>Install the server dependencies</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd vuetrx
-npm install
-</code></pre></div></li>
-<li><p>Create a local database</p></li>
-<li><p>Start the server    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">node server
-</code></pre></div></li>
-<li><p>Run the application</p>
-
-<ul>
-<li>Open a browser and access the following URL:
-<a href="http://localhost:5000">http://localhost:5000</a></li>
-</ol>
 
 <h2>Deploying to an app</h2>
 
