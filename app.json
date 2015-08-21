@@ -1,0 +1,6 @@
+{
+    "name": "Vuetrx Quickstart",
+    "description": "Vuetrx",
+    "repository": "https://github.com/ClearbridgeMobile/vuetrx",
+    "addons": ["heroku-postgresql", "herokuconnect:demo"]
+}
