@@ -105,51 +105,34 @@ heroku create
 
 <h2>Deploying to an app</h2>
 
-<p>You can also deploy Vuetrx as an app on your device using Cordova:</p>
+<p>You can also deploy Vuetrx as an app on your device using the iBeacon demo project</p>
 
 <ol>
-<li><p>Install Cordova </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">npm install -g cordova
+<li><p>Clone the repository </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/ClearbridgeMobile/vuetrx
 </code></pre></div></li>
-<li><p>Create the Cordova application</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><strong>MORE INFO</strong>
+<li><p>Switch & check out mobile-app branch</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git checkout -b mobile-app
 </code></pre></div></li>
-<li><p>Adjust the content www folder</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd vuetrx-shell
+<li><p>Open Mobile app in XCODE</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">navigste to iBeacons Demo/ folder
 </code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">rm -rf www
+<div class="highlight"><pre><code class="language-text" data-lang="text">open iBeacon Demo.xcworkspace
 </code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">ln -s [path-to-vuetrx]/client www
+<li><p>Add Heroku Server Endpoint</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">navigate to Models/Constants.m
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_BEACON with your heroku URL
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_USER with your heroku URL
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_RESET with your heroku URL
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace loyalty_points__c in LOYALTY_POINTS with the field mapped in Heroku connect
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Run project on two iOS devices
 </code></pre></div></li>
-<li><p>Install the Cordova plugins</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova plugins add org.apache.cordova.device
-</code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova plugins add org.apache.cordova.console
-</code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova plugins add org.apache.cordova.statusbar
-</code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova plugins add org.apache.cordova.geolocation
-</code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova plugins add org.apache.cordova.dialogs
-</code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova plugins add org.apache.cordova.inappbrowser
-</code></pre></div></li>
-<li><p>Add a platform</p></li>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova platform add ios
-</code></pre></div>
 
-<li><p>Build the project</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cordova build ios
-</code></pre></div></li>
-<li><p>Run the app in the emulator</p>
-<ul>
-<li>Open the project (platforms/ios/Vuetrx.xcodeproj)
-<li>Run Emulator</li>
-</ol>
-
-
-
-    </div>
 
     <!--<div class="col-xs-12 col-sm-4 right-nav">-->
 
