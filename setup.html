@@ -103,6 +103,62 @@ heroku create
 </ol>
 
 
+<h2>Configuring Heroku Connect & Actionhero Server</h2>
+
+<p>You will need setup Heroku Connect and update the actionhero server to match</p>
+
+<ol>
+<li><p>Configure Heroku connect</p>
+<ul>
+<li><p>Navigate to your Heroku app dashboard</p></li>
+<li><p>Click on Heroku Connect addon</p></li>
+<li><p>Perform setup</p></li>
+<li><p>Link Salesforce account</p></li>
+<li><p>Map desired field from Salesforce (Demo setup for any double field)</p></li>
+<li><p>Take note of the field name (ours lookes like loyalty_points__c) we will later add this to the Actionhero server</p></li>
+<li><p>Take note of teh Mapped Object Name (ours is Account) we will later add this to the Actionhero server</p></li>
+<li><p>Take note of teh DATABASE_URL (ours is salesforce) we will later add this to the Actionhero server</p></li>
+</ul>
+<li><p>Obtain Postgres URL</p>
+<ul>
+<li><p>Navigate to your Heroku app dashboard</p></li>
+<li><p>Click on Postgres addon</p></li>
+<li><p>Under Connection Settings</p></li>
+<li><p>For the field URL click show</p></li>
+<li><p>Take not of the URL we will later add this to the Actionhero server</p></li>
+</ul>
+<li><p>Configure Action Hero server</p>
+<ul>
+<li><p>Within your git navigate to server/pg.js</p></li>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace conString with the Postgres URL
+</code></pre></div>
+<li><p>Within your git navigate to actions/beacon.js</p></li>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace loyalty_points__c with your field name
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace salesforce with your DATABASE_URL
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace Account with mapped Object Name
+</code></pre></div>
+<li><p>Within your git navigate to actions/reset.js</p></li>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace loyalty_points__c with your field name
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace salesforce with your DATABASE_URL
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace Account with mapped Object Name
+</code></pre></div>
+<li><p>Within your git navigate to actions/users.js</p></li>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace loyalty_points__c with your field name
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace salesforce with your DATABASE_URL
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace Account with mapped Object Name
+</code></pre></div>
+</ul>
+
+</ol>
+
+
+
 <h2>Deploying to an app</h2>
 
 <p>You can also deploy Vuetrx as an app on your device using the iBeacon demo project</p>
@@ -115,14 +171,14 @@ heroku create
 <div class="highlight"><pre><code class="language-text" data-lang="text">git checkout -b mobile-app
 </code></pre></div></li>
 <li><p>Open Mobile app in XCODE</p>
-<ul><li>Open the project (/iBeacon Demo/iBeacon Demo.xcworkspace)</li></ul>
+<ul><li><p>Open the project (/iBeacon Demo/iBeacon Demo.xcworkspace)</p></li></ul>
 <li><p>Add Heroku Server Endpoint</p>
-<ul><li>navigate to Models/Constants.m</li>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_BEACON with your heroku URL
+<ul><li><p>navigate to Models/Constants.m</p></li>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_BEACON with your Heroku URL
 </code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_USER with your heroku URL
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_USER with your Heroku URL
 </code></pre></div>
-<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_RESET with your heroku URL
+<div class="highlight"><pre><code class="language-text" data-lang="text">Replace ENDPOINT in HEROKU_ENDPOINT_RESET with your Heroku URL
 </code></pre></div>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Replace loyalty_points__c in LOYALTY_POINTS with the field mapped in Heroku connect
 </code></pre></div>
@@ -130,8 +186,8 @@ heroku create
 
 
 <li><p>Deploy to device 2 devices</p>
-<ul><li>Deploy to iOS Phone (Consumer)</li>
-<li>Deploy to Tablet (Kiosk)</li>
+<ul><li><p>Deploy to iOS Phone (Consumer)</p></li>
+<li><p>Deploy to Tablet (Kiosk)</p></li>
 </ul>
 
 </ol>
