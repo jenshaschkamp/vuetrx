@@ -61,7 +61,20 @@
     <div class="col-xs-12">
         <h1>Setup</h1>
         <!--<hr/>-->
-        <h2>Deploying to Heroku using the Heroku Button</h2>
+        <p>To deploy Vuetrx, please complete the following steps:</p>
+        <ol>
+            <li>Setup Salesforce</li>
+            <li>Deploy To Heroku</li>
+            <li>Conifgure Heroku Connect and ActionHero Server</li>
+            <li>Install The Mobile App</li>
+        </ol>
+        <h2>1. Setup Salesforce</h2>
+        <p>To connect Veutrx to Salesforce you need the following:</p>
+        <ul><p>Salesforce Developer Edition Account. <a href="https://developer.salesforce.com/blogs/developer-relations/2015/02/simple-data-integration-heroku-connect.html">Click here for more information</a></p>
+        
+        <p>A double value field created within the Account record. <a href="https://help.salesforce.com/HTViewHelpDoc?id=adding_fields.htm">More information on creating the field</a></p></ul>
+       
+        <h2>2. Deploying to Heroku using the Heroku Button</h2>
 
 <p>You can deploy your own version of Vuetrx in seconds using the Heroku button below:</p>
 
@@ -94,7 +107,7 @@ heroku create
 </ol>
 
 
-<h2>Configuring Heroku Connect & Actionhero Server</h2>
+<h2>3. Configuring Heroku Connect & Actionhero Server</h2>
 
 <p>You will need setup Heroku Connect and update the actionhero server to match</p>
 
@@ -149,7 +162,7 @@ heroku create
 
 
 
-<h2>Deploying to an app</h2>
+<h2>Installing The Mobile App</h2>
 
 <p>You can also deploy Vuetrx as an app on your device using the iBeacon demo project</p>
 
@@ -157,6 +170,7 @@ heroku create
 <li><p>Clone the repository </p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/ClearbridgeMobile/vuetrx
 </code></pre></div></li>
+<li><p>Under <strong>Branch,</strong> switch from Master to <strong>Mobile-App</strong></p></li>
 <li><p>Switch & check out mobile-app branch</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">git checkout -b mobile-app
 </code></pre></div></li>
