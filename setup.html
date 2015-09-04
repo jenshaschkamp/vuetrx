@@ -70,9 +70,25 @@
         </ol>
         <h2>1. Setup Salesforce</h2>
         <p>To connect Veutrx to Salesforce you need the following:</p>
-        <ul><p>Salesforce Developer Edition Account. <a href="https://developer.salesforce.com/blogs/developer-relations/2015/02/simple-data-integration-heroku-connect.html">Click here for more information</a></p>
-        
-        <p>A double value field created within the Account record. <a href="https://help.salesforce.com/HTViewHelpDoc?id=adding_fields.htm">More information on creating the field</a></p></ul>
+        <ul>
+            <li>
+                <p>Salesforce Developer Edition Account. <a href="https://developer.salesforce.com/blogs/developer-relations/2015/02/simple-data-integration-heroku-connect.html">Click here for more information</a></p>
+            </li>
+            <li>
+                 <p>A double value field created within the Account record. <a href="https://help.salesforce.com/HTViewHelpDoc?id=adding_fields.htm">More information on creating the field</a></p>
+            </li>
+            <li>
+                Map desired field from Salesforce
+                <ul>
+                    <li>
+                        Name your field 'loyalty_points__c'. We will later add this to the Actionhero server
+                    </li>
+                    <li>
+                        Take note of the Mapped Object Name (ours is Account). We will later add this to the Actionhero server
+                    </li>
+                </ul>
+            </li>
+       </ul>
        
         <h2>2. Deploying to Heroku using the Heroku Button</h2>
 
